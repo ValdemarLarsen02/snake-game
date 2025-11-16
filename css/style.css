@@ -1,34 +1,85 @@
-body {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-    padding: 12px;
+/* ---------- Reset og base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    padding: 20px;
+}
+
+/* ---------- Main layout ---------- */
 main {
     max-width: 900px;
     margin: 0 auto;
-}
-
-#controls {
     display: flex;
-    gap: 8px;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
+    gap: 20px;
 }
 
-canvas {
-    border: 1px solid #777;
-    display: block;
-    margin-top: 12px;
+/* ---------- Info / How to play ---------- */
+#info {
     background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 16px 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+#info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #2a7ae2;
+}
+
+#info ul {
+    margin: 8px 0 12px 20px;
+}
+
+#info p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* ---------- Canvas / Game ---------- */
+canvas {
+    border: 2px solid #777;
+    border-radius: 6px;
+    background: #f9f9f9;
+    display: block;
+    margin-top: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- Buttons (til fremtidige controls) ---------- */
 button {
-    padding: 6px 10px;
+    padding: 8px 14px;
+    background: #2a7ae2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
 }
 
+button:hover {
+    background: #1e5bb8;
+}
+
+/* ---------- Labels ---------- */
 label {
     display: flex;
     align-items: center;
     gap: 6px;
 }
+
+/* ---------- Fjerner ubrugt gamle styles ---------- */
+/* #controls er ikke brugt endnu, så vi kan fjerne tidligere flex-styling */
